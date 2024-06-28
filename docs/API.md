@@ -58,6 +58,7 @@ tracer.use('pg', {
 <h5 id="ioredis-config"></h5>
 <h5 id="jest"></h5>
 <h5 id="kafkajs"></h5>
+<h5 id="confluent-kafka-javascript"></h5>
 <h5 id="koa"></h5>
 <h5 id="koa-tags"></h5>
 <h5 id="koa-config"></h5>
@@ -128,6 +129,7 @@ tracer.use('pg', {
 * [ioredis](./interfaces/export_.plugins.ioredis.html)
 * [jest](./interfaces/export_.plugins.jest.html)
 * [kafkajs](./interfaces/export_.plugins.kafkajs.html)
+* [confluent-kafka-javascript]((./interfaces/export_.plugins.confluent-kafka-javascript.html))
 * [knex](./interfaces/export_.plugins.knex.html)
 * [koa](./interfaces/export_.plugins.koa.html)
 * [ldapjs](./interfaces/export_.plugins.ldapjs.html)

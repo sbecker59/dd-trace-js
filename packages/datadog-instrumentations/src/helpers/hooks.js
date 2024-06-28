@@ -27,6 +27,7 @@ module.exports = {
   '@redis/client': () => require('../redis'),
   '@smithy/smithy-client': () => require('../aws-sdk'),
   '@vitest/runner': { esmFirst: true, fn: () => require('../vitest') },
+  '@confluentinc/kafka-javascript': () => require('../confluent-kafka-javascript'),
   aerospike: () => require('../aerospike'),
   amqp10: () => require('../amqp10'),
   amqplib: () => require('../amqplib'),

@@ -173,7 +173,8 @@ interface Plugins {
   "http2": tracer.plugins.http2;
   "ioredis": tracer.plugins.ioredis;
   "jest": tracer.plugins.jest;
-  "kafkajs": tracer.plugins.kafkajs
+  "kafkajs": tracer.plugins.kafkajs;
+  "confluent-kafka-javascript": tracer.plugins.confluent_kafka_javascript
   "knex": tracer.plugins.knex;
   "koa": tracer.plugins.koa;
   "langchain": tracer.plugins.langchain;
@@ -1622,6 +1623,11 @@ declare namespace tracer {
      * [langchain](https://js.langchain.com/) module
      */
     interface langchain extends Instrumentation {}
+
+    /**
+     * [confluent-kafka-javascript](https://github.com/confluentinc/confluent-kafka-javascript) module.
+     */
+    interface confluent_kafka_javascript extends Instrumentation {}
 
     /**
      * This plugin automatically instruments the

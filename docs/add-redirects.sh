@@ -37,6 +37,7 @@ declare -a plugins=(
   "ioredis"
   "jest"
   "kafkajs"
+  "confluent-kafka-javascript"
   "knex"
   "koa"
   "ldapjs"

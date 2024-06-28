@@ -346,6 +346,7 @@ tracer.use('ioredis', { splitByInstance: true });
 tracer.use('jest');
 tracer.use('jest', { service: 'jest-service' });
 tracer.use('kafkajs');
+tracer.use('confluent-kafka-javascript');
 tracer.use('knex');
 tracer.use('koa');
 tracer.use('koa', httpServerOptions);

@@ -559,6 +559,38 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - uses: ./.github/actions/plugins/test
 
+  confluent-kafka-javascript:
+    runs-on: ubuntu-latest
+    services:
+      kafka:
+        image: debezium/kafka:1.7
+        env:
+          CLUSTER_ID: 5Yr1SIgYQz-b-dgRabWx4g
+          NODE_ID: "1"
+          CREATE_TOPICS: "test-topic:1:1"
+          KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+          KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://127.0.0.1:9092
+          KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: "0"
+        ports:
+          - 9092:9092
+          - 9093:9093
+    env:
+      PLUGINS: confluent-kafka-javascript
+      SERVICES: kafka
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/testagent/start
+      - uses: ./.github/actions/node/setup
+      - run: yarn install
+      - uses: ./.github/actions/node/oldest
+      - run: yarn test:plugins:ci
+      - uses: ./.github/actions/node/latest
+      - run: yarn test:plugins:ci
+      - if: always()
+        uses: ./.github/actions/testagent/logs
+      - uses: codecov/codecov-action@v3
+  
+
   knex:
     runs-on: ubuntu-latest
     env:
