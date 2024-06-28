@@ -18,6 +18,7 @@ module.exports = {
   get '@opensearch-project/opensearch' () { return require('../../../datadog-plugin-opensearch/src') },
   get '@redis/client' () { return require('../../../datadog-plugin-redis/src') },
   get '@smithy/smithy-client' () { return require('../../../datadog-plugin-aws-sdk/src') },
+  get '@confluentinc/kafka-javascript' () { return require('../../../datadog-plugin-confluent-kafka-javascript/src') },
   get aerospike () { return require('../../../datadog-plugin-aerospike/src') },
   get amqp10 () { return require('../../../datadog-plugin-amqp10/src') },
   get amqplib () { return require('../../../datadog-plugin-amqplib/src') },
